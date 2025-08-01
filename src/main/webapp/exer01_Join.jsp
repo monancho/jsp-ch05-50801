@@ -30,9 +30,10 @@
 <body>
 	<h2>점수표 입력</h2>
 	<form action="exer01_Ok.jsp" name="scoreForm" onsubmit="return checkFun()">
-		국어 : <input type="number" name = "kor">
-		영어 : <input type="number" name = "eng">
-		수학 : <input type="number" name = "math">
+		국어 : <input type="number" name = "kor"> <br>
+		영어 : <input type="number" name = "eng"> <br>
+		수학 : <input type="number" name = "math"> <br>
+		<hr>
 		<input type="submit" value="입력" >
 		<input type="reset" value="초기화" >
 	</form>

@@ -4,31 +4,35 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<script type="text/javascript">
-	alert ("안녕하세요 관리자님. 로그인 성공하셨습니다!");
-</script>
 <title>Insert title here</title>
 </head>
 <body>
 	<%!
 	String memberId;
 	String memberPw;
+	boolean flag;
 	%>
 	
 	<%
 	memberId = request.getParameter("memberId");
 	memberPw = request.getParameter("memberPw");
+	
+	if (memberId.equals("admin")  && memberPw.equals("1234")) {
+		%>
+		
+		<div style="font-size: 32px; color: lime;">안녕하세요 관리자님. 로그인 성공하셨습니다!</div>
+		
+		<%
+	} else {
+		%>
+		<div style="font-size: 64px; color: red; ">Error:  로그인 실패하셨습니다.</div>
+	<%	
+	}
 	%>
 	
-	<h2>개인정보창</h2>
-	<h6>비밀번호는 아무에게도 보여주지 마십시오.</h6>
-	<ul>
-	<li>
-		아이디 : <%= memberId %>
-	</li>
-	<li>
-		비밀번호 : <%= memberPw %>
-	</li>
-	</ul>	
+	
+	
+	
+		
 </body>
 </html>
